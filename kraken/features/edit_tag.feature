@@ -1,15 +1,19 @@
 Feature: Editar pagina
 
-@user1 @web
-Scenario: Editar el titulo de una página creada
+@user @web
+Scenario: Editar el nombre del tag creado
   Given I navigate to page "http://localhost:2368/ghost/#/pages"
   And I wait for 5 seconds
-  And I enter email "<USERNAME>"
+  When I enter email "<USERNAME>"
   And I wait for 2 seconds
   And I enter password "<PASSWORD>"
   And I wait for 2 seconds
   And I click next
   And I wait for 2 seconds
-  And I got to new tag module
+  And I click on tags module
   And I wait for 2 seconds
+  And I click on new tag
+  And I wait for 2 seconds
+  And I enter the tag name
+  And I save the new tag
  

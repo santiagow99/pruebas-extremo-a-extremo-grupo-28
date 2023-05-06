@@ -42,7 +42,23 @@ When('I return to page list', async function () {
 
 // Editar Tag
 
-When("I got to new tag module", async function() {
+When("I click on tags module", async function() {
     let element = await this.driver.$("#ember38");
     return await element.click();
-})
+});
+
+When("I click on new tag", async function() {
+    let element = await this.driver.$("#ember107");
+    return await element.click();
+});
+
+When("I enter the tag name", async function () {
+    let tagName = "Mi primer tag"
+    let element = await this.driver.$('#tag-name');
+    return await element.setValue(password);
+});
+
+When("I save the new tag", async function() {
+    let element = await this.driver.$("#ember217");
+    return await element.click();
+});
