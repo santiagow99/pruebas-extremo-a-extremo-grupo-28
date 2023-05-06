@@ -39,3 +39,10 @@ When('I publish the page', async function () {
 When('I return to page list', async function () {
     return await browser.back();
 });
+
+// Editar Tag
+
+When("I got to new tag module", async function() {
+    let element = await this.driver.$("#ember38");
+    return await element.click();
+})
