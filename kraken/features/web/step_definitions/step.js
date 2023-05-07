@@ -43,22 +43,86 @@ When('I return to page list', async function () {
 // Editar Tag
 
 When("I click on tags module", async function() {
-    let element = await this.driver.$("#ember38");
-    return await element.click();
+  let element = await this.driver.$("#ember38");
+  return await element.click();
 });
 
 When("I click on new tag", async function() {
-    let element = await this.driver.$("#ember107");
-    return await element.click();
+  let element = await this.driver.$(".gh-btn-green");
+  return await element.click();
 });
 
 When("I enter the tag name", async function () {
-    let tagName = "Mi primer tag"
-    let element = await this.driver.$('#tag-name');
-    return await element.setValue(password);
+  let element = await this.driver.$('#tag-name');
+  return await element.setValue("1 tag");
 });
 
-When("I save the new tag", async function() {
-    let element = await this.driver.$("#ember217");
-    return await element.click();
+Then("I save the tag", async function () {
+  let element = await this.driver.$(".gh-btn-icon");
+  return await element.click();
+});
+
+When("I click on the created tag", async function() {
+  let element = await this.driver.$(".gh-tags-list-item");
+  return await element.click();
+});
+
+When("I edit the tag name", async function () {
+  let number = Math.floor(Math.random() * 100).toString();
+  let element = await this.driver.$('#tag-name');
+  return await element.setValue("tag editado " + number);
+});
+
+When("I edit the tag slug", async function () {
+  let number = Math.floor(Math.random() * 100).toString();
+  let element = await this.driver.$('#tag-slug');
+  return await element.setValue("tag-" + number + "-editado");
+});
+
+When("I edit the tag description", async function () {
+  let element = await this.driver.$('#tag-description');
+  return await element.setValue("Se agrega descripción");
+});
+
+When("I edit the tag color", async function () {
+  let element = await this.driver.$('input[name="accent-color"]');
+  return await element.setValue("4FB5ED");
+});
+
+When("I open my user info", async function() {
+  let element = await this.driver.$(".gh-user-avatar");
+  return await element.click();
+});
+
+When("I close my session", async function() {
+  let element = await this.driver.$(".user-menu-signout");
+  return await element.click();
+});
+
+// Eliminar Post
+
+When("I click on posts module", async function() {
+  let element = await this.driver.$("#ember28");
+  return await element.click();
+});
+
+When("I click the first post on the list", async function() {
+  let element = await this.driver.$(".gh-posts-list-item");
+  return await element.click();
+});
+
+When("I click the post settings", async function() {
+  let element = await this.driver.$(".post-settings");
+  return await element.click();
+});
+
+Then("I click the delete button", async function() {
+  let element = await this.driver.$(".settings-menu-delete-button");
+  element.scrollIntoView(false);
+  return await element.click();
+});
+
+Then("I confirm the delete", async function() {
+  let element = await this.driver.$(".gh-btn-red");
+  return await element.click();
 });
