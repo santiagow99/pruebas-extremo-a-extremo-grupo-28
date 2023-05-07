@@ -1,5 +1,3 @@
-const { Given, When, Then } = require('@cucumber/cucumber');
-
 // Editar page
 const { Given, When, Then } = require('@cucumber/cucumber');
 
