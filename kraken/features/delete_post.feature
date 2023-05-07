@@ -1,8 +1,8 @@
 Feature: Eliminar post
 
-@user1 @web
+@user4 @web
 Scenario: Eliminar el primer post de la lista de posts
-  Given I navigate to page "http://localhost:2368/ghost/#/pages"
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
   And I wait for 5 seconds
   And I enter email "<USERNAME>"
   And I wait for 2 seconds
