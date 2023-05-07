@@ -53,7 +53,7 @@ When("I click on new tag", async function() {
 });
 
 When("I enter the tag name", async function () {
-  let element = await this.driver.$('#tag-name');
+  let element = await this.driver.$("#tag-name");
   return await element.setValue("1 tag");
 });
 
@@ -69,18 +69,18 @@ When("I click on the created tag", async function() {
 
 When("I edit the tag name", async function () {
   let number = Math.floor(Math.random() * 100).toString();
-  let element = await this.driver.$('#tag-name');
+  let element = await this.driver.$("#tag-name");
   return await element.setValue("tag editado " + number);
 });
 
 When("I edit the tag slug", async function () {
   let number = Math.floor(Math.random() * 100).toString();
-  let element = await this.driver.$('#tag-slug');
+  let element = await this.driver.$("#tag-slug");
   return await element.setValue("tag-" + number + "-editado");
 });
 
 When("I edit the tag description", async function () {
-  let element = await this.driver.$('#tag-description');
+  let element = await this.driver.$("#tag-description");
   return await element.setValue("Se agrega descripción");
 });
 

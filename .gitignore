@@ -22,3 +22,6 @@ node_modules
 !.vscode/extensions.json
 .history/*
 
+#kraken
+.kraken
+reports

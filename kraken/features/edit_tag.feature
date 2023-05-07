@@ -2,7 +2,7 @@ Feature: Editar tag
 
 @user1 @web
 Scenario: Editar el nombre del tag creado
-  Given I navigate to page "http://localhost:2368/ghost/#/pages"
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
   And I wait for 5 seconds
   And I enter email "<USERNAME>"
   And I wait for 2 seconds
@@ -15,6 +15,7 @@ Scenario: Editar el nombre del tag creado
   And I click on new tag
   And I wait for 2 seconds
   And I enter the tag name
+  And I wait for 1 seconds
   And I save the tag
   And I wait for 2 seconds
   And I click on tags module
@@ -34,7 +35,7 @@ Scenario: Editar el nombre del tag creado
 
 @user2 @web
 Scenario: Editar el slug del tag creado
-  Given I navigate to page "http://localhost:2368/ghost/#/pages"
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
   And I wait for 5 seconds
   And I enter email "<USERNAME>"
   And I wait for 2 seconds
@@ -47,6 +48,7 @@ Scenario: Editar el slug del tag creado
   And I click on new tag
   And I wait for 2 seconds
   And I enter the tag name
+  And I wait for 1 seconds
   And I save the tag
   And I wait for 2 seconds
   And I click on tags module
@@ -64,7 +66,7 @@ Scenario: Editar el slug del tag creado
 
 @user3 @web
 Scenario: Editar la descripcion del tag creado
-  Given I navigate to page "http://localhost:2368/ghost/#/pages"
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
   And I wait for 5 seconds
   And I enter email "<USERNAME>"
   And I wait for 2 seconds
@@ -77,6 +79,7 @@ Scenario: Editar la descripcion del tag creado
   And I click on new tag
   And I wait for 2 seconds
   And I enter the tag name
+  And I wait for 1 seconds
   And I save the tag
   And I wait for 2 seconds
   And I click on tags module
@@ -94,7 +97,7 @@ Scenario: Editar la descripcion del tag creado
 
 @user4 @web
 Scenario: Editar color del tag creado
-  Given I navigate to page "http://localhost:2368/ghost/#/pages"
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
   And I wait for 5 seconds
   And I enter email "<USERNAME>"
   And I wait for 2 seconds
@@ -107,6 +110,7 @@ Scenario: Editar color del tag creado
   And I click on new tag
   And I wait for 2 seconds
   And I enter the tag name
+  And I wait for 1 seconds
   And I save the tag
   And I wait for 2 seconds
   And I click on tags module

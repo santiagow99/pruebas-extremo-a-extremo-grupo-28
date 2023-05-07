@@ -6,4 +6,8 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
+  env: {
+    USERNAME: "c.wilchesv@uniandes.edu.co",
+    PASSWORD: "2TiSXG9VVvECnp",
+  },
 });
